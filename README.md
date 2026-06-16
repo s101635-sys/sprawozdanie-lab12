@@ -11,7 +11,7 @@ NETWORK ID     NAME        DRIVER    SCOPE
 0b02d0fb24da   bridge      bridge    local
 2c8048913141   host        host      local
 42dd6cea7233   lab12net    bridge    local
-### 9e702ff33640   lab12net2   bridge    local
+9e702ff33640   lab12net2   bridge    local  //TU JEST NASZA SIEC
 3d2ec8c2b6ec   none        null      local
 ```
 
@@ -21,7 +21,7 @@ docker run -d --name web1 --network lab12net2 -p 8081:80 -v C:\Users\kemot\spraw
 docker run -d --name web2 --network lab12net2 -p 8082:80 -v C:\Users\kemot\sprawozdanie-lab12\web2\index.html:/usr/share/nginx/html/index.html:ro -v C:\Users\kemot\sprawozdanie-lab12\logs\web2:/var/log/nginx nginx:latest
 docker run -d --name web3 --network lab12net2 -p 8083:80 -v C:\Users\kemot\sprawozdanie-lab12\web3\index.html:/usr/share/nginx/html/index.html:ro -v C:\Users\kemot\sprawozdanie-lab12\logs\web3:/var/log/nginx nginx:latest
 ```
-:ro - read only 
+:ro - read only \n
 nginx:latest - korzystamy z nginxa
 
 ```
