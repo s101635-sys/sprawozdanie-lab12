@@ -152,6 +152,5 @@ plik error.log serwera web1
 2026/06/16 18:53:19 [notice] 1#1: start worker process 45
 2026/06/16 18:53:19 [notice] 1#1: start worker process 46
 2026/06/16 19:00:00 [error] 29#29: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081", referrer: "http://localhost:8081/"
-
  ```
 
