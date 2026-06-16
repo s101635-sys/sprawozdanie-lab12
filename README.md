@@ -117,8 +117,10 @@ C:\Users\kemot\sprawozdanie-lab12>docker network inspect lab12net2
 
 ## logi generowane przez serwery
 <img width="327" height="680" alt="image" src="https://github.com/user-attachments/assets/5d541067-4ad5-4649-be4e-43daa5c60abb" />
+ 
  <br />
- plik access.log serwea web1
+ 
+ plik access.log serwera web1
  ```
 172.19.0.1 - - [16/Jun/2026:19:00:00 +0000] "GET / HTTP/1.1" 200 159 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
 172.19.0.1 - - [16/Jun/2026:19:00:00 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
