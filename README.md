@@ -40,3 +40,79 @@ bc8b85da2bb1   nginx:latest   "/docker-entrypoint.…"   18 seconds ago       Up
 7b9853fcb12a   nginx:latest   "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8082->80/tcp, [::]:8082->80/tcp   web2
 3aa32b32ad44   nginx:latest   "/docker-entrypoint.…"   4 minutes ago        Up 4 minutes        0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   web1
 ```
+## Wszystkie serwery podłączone do jednej sieci
+```
+C:\Users\kemot\sprawozdanie-lab12>docker network inspect lab12net2
+[
+    {
+        "Name": "lab12net2",
+        "Id": "9e702ff33640714dfb85ba34dcf9fb8d66319717909336942dedd1825f491a1c",
+        "Created": "2026-06-16T18:39:05.962389581Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/16",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {
+            "com.docker.network.enable_ipv4": "true",
+            "com.docker.network.enable_ipv6": "false"
+        },
+        "Labels": {},
+        "Containers": {
+            "3aa32b32ad44198f5ad44710374463f584469468b5442c9df7c3bfdb4ca23eb1": {
+                "Name": "web1",
+                "EndpointID": "2f95b10e9f30aa13aa82da34a3fd7bda66261010d8d44a3f0b0e86dc9c666fe3",
+                "MacAddress": "72:de:10:1c:ba:4e",
+                "IPv4Address": "172.19.0.2/16",
+                "IPv6Address": ""
+            },
+            "7b9853fcb12a225f0bd314f290f4b183670454cb0291ae65e37e81d2e8962038": {
+                "Name": "web2",
+                "EndpointID": "263538818bf3532e28a2ff67e0a4044f01a113af67d708d9a50a9c4596b9f732",
+                "MacAddress": "c2:01:b0:4c:b9:4d",
+                "IPv4Address": "172.19.0.3/16",
+                "IPv6Address": ""
+            },
+            "bc8b85da2bb130e9716b1966717017ed76d68cdd924fd934a664c21355bdd46a": {
+                "Name": "web3",
+                "EndpointID": "d1de9dd131fa61a977b27938e07e0884501157c13c3b80d719ba1a704d2f93bf",
+                "MacAddress": "1e:5b:44:77:62:db",
+                "IPv4Address": "172.19.0.4/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.19.0.0/16": {
+                        "IPsInUse": 6,
+                        "DynamicIPsAvailable": 65530
+                    }
+                }
+            }
+        }
+    }
+]
+```
+## strony wyświetlane przez serwery 
+<img width="542" height="442" alt="Zrzut ekranu 2026-06-16 223743" src="https://github.com/user-attachments/assets/9bb9fc60-f76a-4282-acb3-39b2bcec1b89" />
+<img width="533" height="395" alt="Zrzut ekranu 2026-06-16 223810" src="https://github.com/user-attachments/assets/02ade54d-d3f6-4627-a522-09b670b10403" />
+<img width="472" height="420" alt="Zrzut ekranu 2026-06-16 223825" src="https://github.com/user-attachments/assets/bfacd49b-4d04-4fdd-bcce-9461a088d18b" />
+
+
