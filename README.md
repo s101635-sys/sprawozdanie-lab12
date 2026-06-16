@@ -115,4 +115,43 @@ C:\Users\kemot\sprawozdanie-lab12>docker network inspect lab12net2
 <img width="533" height="395" alt="Zrzut ekranu 2026-06-16 223810" src="https://github.com/user-attachments/assets/02ade54d-d3f6-4627-a522-09b670b10403" />
 <img width="472" height="420" alt="Zrzut ekranu 2026-06-16 223825" src="https://github.com/user-attachments/assets/bfacd49b-4d04-4fdd-bcce-9461a088d18b" />
 
+## logi generowane przez serwery
+<img width="327" height="680" alt="image" src="https://github.com/user-attachments/assets/5d541067-4ad5-4649-be4e-43daa5c60abb" />
+ <br />
+ plik access.log serwea web1
+ ```
+172.19.0.1 - - [16/Jun/2026:19:00:00 +0000] "GET / HTTP/1.1" 200 159 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
+172.19.0.1 - - [16/Jun/2026:19:00:00 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
+172.19.0.1 - - [16/Jun/2026:19:04:21 +0000] "GET / HTTP/1.1" 200 159 "-" "curl/8.19.0" "-"
+172.19.0.1 - - [16/Jun/2026:20:37:14 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" "-"
+ ```
+plik error.log serwera web1
+ ```
+2026/06/16 18:53:19 [notice] 1#1: using the "epoll" event method
+2026/06/16 18:53:19 [notice] 1#1: nginx/1.29.6
+2026/06/16 18:53:19 [notice] 1#1: built by gcc 14.2.0 (Debian 14.2.0-19) 
+2026/06/16 18:53:19 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2026/06/16 18:53:19 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026/06/16 18:53:19 [notice] 1#1: start worker processes
+2026/06/16 18:53:19 [notice] 1#1: start worker process 29
+2026/06/16 18:53:19 [notice] 1#1: start worker process 30
+2026/06/16 18:53:19 [notice] 1#1: start worker process 31
+2026/06/16 18:53:19 [notice] 1#1: start worker process 32
+2026/06/16 18:53:19 [notice] 1#1: start worker process 33
+2026/06/16 18:53:19 [notice] 1#1: start worker process 34
+2026/06/16 18:53:19 [notice] 1#1: start worker process 35
+2026/06/16 18:53:19 [notice] 1#1: start worker process 36
+2026/06/16 18:53:19 [notice] 1#1: start worker process 37
+2026/06/16 18:53:19 [notice] 1#1: start worker process 38
+2026/06/16 18:53:19 [notice] 1#1: start worker process 39
+2026/06/16 18:53:19 [notice] 1#1: start worker process 40
+2026/06/16 18:53:19 [notice] 1#1: start worker process 41
+2026/06/16 18:53:19 [notice] 1#1: start worker process 42
+2026/06/16 18:53:19 [notice] 1#1: start worker process 43
+2026/06/16 18:53:19 [notice] 1#1: start worker process 44
+2026/06/16 18:53:19 [notice] 1#1: start worker process 45
+2026/06/16 18:53:19 [notice] 1#1: start worker process 46
+2026/06/16 19:00:00 [error] 29#29: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081", referrer: "http://localhost:8081/"
+
+ ```
 
