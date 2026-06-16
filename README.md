@@ -21,7 +21,7 @@ docker run -d --name web1 --network lab12net2 -p 8081:80 -v C:\Users\kemot\spraw
 docker run -d --name web2 --network lab12net2 -p 8082:80 -v C:\Users\kemot\sprawozdanie-lab12\web2\index.html:/usr/share/nginx/html/index.html:ro -v C:\Users\kemot\sprawozdanie-lab12\logs\web2:/var/log/nginx nginx:latest
 docker run -d --name web3 --network lab12net2 -p 8083:80 -v C:\Users\kemot\sprawozdanie-lab12\web3\index.html:/usr/share/nginx/html/index.html:ro -v C:\Users\kemot\sprawozdanie-lab12\logs\web3:/var/log/nginx nginx:latest
 ```
-:ro - read only \n
+:ro - read only <br />
 nginx:latest - korzystamy z nginxa
 
 ```
